@@ -10,7 +10,7 @@ from PIL import Image
 
 #Imagem
 
-image = Image.open('C:/Users/Filipe/Desktop/ML/github/diabetes/DiabetesApp.jpg')
+image = Image.open('DiabetesApp.jpg')
 st.image(image, caption="Algoritmos auxiliadores no prognóstico de patologias", use_column_width= True)
 
 #Título
@@ -33,7 +33,7 @@ st.markdown("""[Para ver o repositório clique aqui.](https://github.com/JoseFil
 
 
 #dataset
-df = pd.read_csv("C:/Users/Filipe/Desktop/ML/github/diabetes/diabetes.csv")
+df = pd.read_csv("diabetes.csv")
 
 #Cabeçalho
 st.subheader("Visão das Informações")
