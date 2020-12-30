@@ -7,19 +7,21 @@ from sklearn.tree import DecisionTreeClassifier
 from PIL import Image
 
 
-#Título
-st.subheader("Predição de Diabetes Utilizando Machine Learning")
 
 #Imagem
 
 image = Image.open('C:/Users/Filipe/Desktop/ML/github/diabetes/DiabetesApp.jpg')
-st.image(image, caption="ML", use_column_width= True)
+st.image(image, caption="Algoritmos auxiliadores no prognóstico de patologias", use_column_width= True)
+
+#Título
+st.title("DiabetesApp: O uso de Machine Learning para Predição de Diabete")
 
 
 st.markdown("""
 \n
-Aplicativo que faz a predição de possível diabetes dos
-pacientes, através de **inteligência artificial**,
+Visando a eficiência das aplicações de _Machine Learning_ na área de saúde, o DiabetesApp
+é um aplicativo que faz a predição de possível diabetes dos
+pacientes, através da inteligência artificial,
 utilizando exames simples. Podemos utilizar o menu ao lado para inserir as informações,
 além de visualizar os atributos de forma gráfica. 
 \n
@@ -39,6 +41,8 @@ st.subheader("Visão das Informações")
 
 
 #Nome do Usuário
+st.sidebar.title("DiabetesApp")
+st.sidebar.subheader("Insira as Informações")
 user_input = st.sidebar.text_input("Digite seu nome")
 
 st.write('Paciente: ', user_input)
