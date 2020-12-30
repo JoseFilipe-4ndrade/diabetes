@@ -4,40 +4,34 @@ import streamlit as st
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-#from PIL import Image
+from PIL import Image
 
 
 #Título
 st.subheader("Predição de Diabetes Utilizando Machine Learning")
 
 #Imagem
-<<<<<<< HEAD
-image = Image.open('C:/Users/Filipe/Desktop/ML/github/machinelearning/DiabetesApp.jpg')
-st.image(image, caption="ML", use_column_width= True)
-=======
-#image = Image.open('C:/Users/Filipe/Desktop/ML/DiabetesApp.jpg')
-#st.image(image, caption="ML", use_column_width= True)
->>>>>>> f8dc5081eddb8bf28c75c3d166d926950c0d510e
 
-st.write("""
+image = Image.open('C:/Users/Filipe/Desktop/ML/github/diabetes/DiabetesApp.jpg')
+st.image(image, caption="ML", use_column_width= True)
+
+
+st.markdown("""
 \n
 Aplicativo que faz a predição de possível diabetes dos
-pacientes, através de inteligência artificial,
-<<<<<<< HEAD
+pacientes, através de **inteligência artificial**,
 utilizando exames simples. Podemos utilizar o menu ao lado para inserir as informações,
-além de visualizar os atributos de forma gráfica.
-=======
-utilizando exames simples.  O menu na lateral servirá para 
-o usuário inserir suas informações.
->>>>>>> f8dc5081eddb8bf28c75c3d166d926950c0d510e
+além de visualizar os atributos de forma gráfica. 
 \n
-Autores: José Filipe de Andrade e Maycon Carvalho.\n
-Classificador Utilizado: Árvore de Decisão.\n
-Base de Dados: PIMA - INDIA (kaggle)
+**Autores:** José Filipe de Andrade e Maycon Carvalho.\n
+**Classificador Utilizado:** Árvore de Decisão.\n
+**Base de Dados:** PIMA - INDIA (kaggle)
 """)
+st.markdown("""[Para ver o repositório clique aqui.](https://github.com/JoseFilipe-4ndrade/diabetes)""", False)
+
 
 #dataset
-df = pd.read_csv("C:/Users/Filipe/Desktop/ML/github/machinelearning/diabetes.csv")
+df = pd.read_csv("C:/Users/Filipe/Desktop/ML/github/diabetes/diabetes.csv")
 
 #Cabeçalho
 st.subheader("Visão das Informações")
